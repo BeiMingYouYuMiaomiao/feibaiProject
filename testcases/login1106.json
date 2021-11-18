@@ -1,0 +1,541 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/Ver2/StudentPassword/login",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/StudentPassword/login",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "password": "MDY1OUM3OTkyRTI2ODk2MjM4NEVCMTdGQUZFODgzNjQ=",
+                    "username": "MTM2ODE0NjY2MzA="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/LessonNumber/getConfig",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/LessonNumber/getConfig",
+                "method": "GET",
+                "headers": {
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "",
+            "request": {
+                "url": "https://configuration.apple.com",
+                "method": "CONNECT",
+                "headers": {
+                    "User-Agent": "SafariViewService/1.0 CFNetwork/1240.0.4 Darwin/20.6.0",
+                    "Proxy-Connection": "keep-alive"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        503
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "text/html;charset=ISO-8859-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/rts_log_file/log_new.php",
+            "request": {
+                "url": "http://rtsserver.feibai.xyz/rts_log_file/log_new.php",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "classroom": "NTIzNDk4N18yMDIxMTEwNg==",
+                    "info": "eyJldmVudF90aW1lIjoiMjAyMS0xMS0wNiAwOToxODo1NSIsImNsYXNzcm9vbSI6IjUyMzQ5ODdfMjAyMTExMDYiLCJ1c2VybmFtZSI6IuWkp+mDhSIsInZlcnNpb24iOjEsImV2ZW50X2NvZGUiOiJPU19sb25naW5fYWNjb3VudCIsInRlbGVwaG9uZSI6IjEzNjgxNDY2NjMwIiwiY29udGVudCI6IntuYW1lOuWkp+mDhSx2ZXJzaW9uOjEuMy41LG9wZXJhdGluZ3N5c3RlbTppT1MxNC43LjEsaW1laXZlbmRlcmlkOjk3M0ZBMzE0LTBDRDEtNEVFMS1CMTY5LUExQzAxQ0E3RTI2NX0ifQ=="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        null
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/LessonNumStudent/getTempLesson",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/LessonNumStudent/getTempLesson",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "student_id": "NTIzNDk4Nw=="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/ExternalApiSecond/getStudentLesson",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/ExternalApiSecond/getStudentLesson",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "student": "NTIzNDk4Nw=="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/LessonNumber/getLessonNumber1",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/LessonNumber/getLessonNumber1",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "course_id": "WwogICI1Mzc1MjY4IiwKICAiNTQ5MjA3OCIKXQ=="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/ExternalApiThird/getTeacherInfoByid",
+            "request": {
+                "url": "https://erp4.api.release.feibai.xyz/Ver2/ExternalApiThird/getTeacherInfoByid",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "id": "WwogICIyNzQwMTgzIgpd"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/CourseConfig/getCourseConfigList",
+            "request": {
+                "url": "https://pt.feibai.xyz/Ver2/CourseConfig/getCourseConfigList",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "course_id": "WwogICI1Mzc1MjY4IiwKICAiNTQ5MjA3OCIKXQ=="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/Ver2/HandoutBind/getBindInfo",
+            "request": {
+                "url": "https://trm.api.release.feibai.xyz/Ver2/HandoutBind/getBindInfo",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "classroom": "WwogICI1Mzc1NTA4IiwKICAiNTM3NTUwNCIsCiAgIjUzNzU1MDAiLAogICI1Mzc1NDk2IiwKICAiNTM3NTQ5MiIsCiAgIjUzNzU0ODgiLAogICI1Mzc1NDg0IiwKICAiNTM3NTQ4MCIsCiAgIjUzNzU0NzYiLAogICI1Mzc1NDcyIiwKICAiNTU1OTE1MSIsCiAgIjU1NTkxNDciLAogICI1NTU5MTQzIiwKICAiNTU1OTEzOSIsCiAgIjU1NTkxMzUiLAogICI1NTU5MTMxIiwKICAiNTU1OTEyNyIsCiAgIjU1NTkxMjMiLAogICI1NTU5MTE5IiwKICAiNTU1OTExNSIsCiAgIjU1NTkxMTEiLAogICI1NTU5MTA3IiwKICAiNTU1OTEwMyIsCiAgIjU1NTkwOTkiLAogICI1NTU5MDk1IiwKICAiNTU1OTA5MSIsCiAgIjU1NTkwODciLAogICI1NTU5MDgzIiwKICAiNTU1OTA4MCIsCiAgIjU1NTkwNzciLAogICI1NDkyMTMwIiwKICAiNTQ5MjEyNiIsCiAgIjU0OTIxMjIiLAogICI1NDkyMTE4IiwKICAiNTQ5MjExNCIsCiAgIjU0OTIxMTAiLAogICI1NDkyMTA2IiwKICAiNTQ5MjEwMiIsCiAgIjU0OTIwOTgiLAogICI1NDkyMDk0IiwKICAiNTU2MzUyOCIsCiAgIjU1NjMwNjgiLAogICI1NTU5NzE4Igpd"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/rts_video/ver2/Wx/getVideoUrl",
+            "request": {
+                "url": "https://erp.feibai.xyz/rts_video/ver2/Wx/getVideoUrl",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "classroom": "WwogICI1Mzc1NTA4IiwKICAiNTM3NTUwNCIsCiAgIjUzNzU1MDAiLAogICI1Mzc1NDk2IiwKICAiNTM3NTQ5MiIsCiAgIjUzNzU0ODgiLAogICI1Mzc1NDg0IiwKICAiNTM3NTQ4MCIsCiAgIjUzNzU0NzYiLAogICI1Mzc1NDcyIiwKICAiNTU1OTE1MSIsCiAgIjU1NTkxNDciLAogICI1NTU5MTQzIiwKICAiNTU1OTEzOSIsCiAgIjU1NTkxMzUiLAogICI1NTU5MTMxIiwKICAiNTU1OTEyNyIsCiAgIjU1NTkxMjMiLAogICI1NTU5MTE5IiwKICAiNTU1OTExNSIsCiAgIjU1NTkxMTEiLAogICI1NTU5MTA3IiwKICAiNTU1OTEwMyIsCiAgIjU1NTkwOTkiLAogICI1NTU5MDk1IiwKICAiNTU1OTA5MSIsCiAgIjU1NTkwODciLAogICI1NTU5MDgzIiwKICAiNTU1OTA4MCIsCiAgIjU1NTkwNzciLAogICI1NDkyMTMwIiwKICAiNTQ5MjEyNiIsCiAgIjU0OTIxMjIiLAogICI1NDkyMTE4IiwKICAiNTQ5MjExNCIsCiAgIjU0OTIxMTAiLAogICI1NDkyMTA2IiwKICAiNTQ5MjEwMiIsCiAgIjU0OTIwOTgiLAogICI1NDkyMDk0IiwKICAiNTU2MzUyOCIsCiAgIjU1NjMwNjgiLAogICI1NTU5NzE4Igpd"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code_message",
+                        "正常"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.is_redirected",
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/VIP/Schedule/findByStuPNumber",
+            "request": {
+                "url": "http://rtsserver.feibai.xyz/VIP/Schedule/findByStuPNumber",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+                    "X-Platform-Id": "ios",
+                    "User-Agent": "fbapp-ios/1.3.5 (com.feibaiedu.fbapp.rts.ios; build:202110150931; iOS 14.7.1) Alamofire/1.3.5"
+                },
+                "data": {
+                    "stuPNumber": "MTM2ODE0NjY2MzA="
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.message",
+                        "查询成功"
+                    ]
+                }
+            ]
+        }
+    ]
+}
